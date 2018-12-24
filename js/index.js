@@ -9,38 +9,38 @@ $(function() {
 	}
 	audioAutoPlay('musicStar');*/
 	//音乐
-//	var pauseMark = true;
-//	$(".music_btn").click(function() {
-//		if(pauseMark) {
-//			pauseMark = false;
-//			$(this).children('img').attr('src', 'images/music_off.png');
-//			$(this).removeClass('music_on');
-//			$("#music")[0].pause();
-//		} else {
-//			$(this).children('img').attr('src', 'images/music_on.png');
-//			$(this).addClass('music_on');
-//			$("#music")[0].play();
-//			pauseMark = true;
-//		}
-//	});
-//
-//	function audioAutoPlay(id) {
-//		var audio = document.getElementById(id);
-//		audio.play();
-//		document.addEventListener("WeixinJSBridgeReady", function() {
-//			if(pauseMark) {
-//				audio.play();
-//			}
-//		}, false);
-//	}
-//	audioAutoPlay('music');
+	var pauseMark = true;
+	$(".music_btn").click(function() {
+		if(pauseMark) {
+			pauseMark = false;
+			$(this).children('img').attr('src', 'images/music_off.png');
+			$(this).removeClass('music_on');
+			$("#music")[0].pause();
+		} else {
+			$(this).children('img').attr('src', 'images/music_on.png');
+			$(this).addClass('music_on');
+			$("#music")[0].play();
+			pauseMark = true;
+		}
+	});
+
+	function audioAutoPlay(id) {
+		var audio = document.getElementById(id);
+		audio.play();
+		document.addEventListener("WeixinJSBridgeReady", function() {
+			if(pauseMark) {
+				audio.play();
+			}
+		}, false);
+	}
+	audioAutoPlay('music');
 
 	//loading页面加载结束
-//	$('.loading .progress div').on('animationend', function() {
-//		$('.loading').fadeOut();
-//		$('.music_btn').fadeIn();
-//		$('.screen1 .box').fadeIn()
-//	});
+	$('.loading .progress div').on('animationend', function() {
+		$('.loading').fadeOut();
+		$('.music_btn').fadeIn();
+		$('.screen1 .box').fadeIn()
+	});
 
 	//swiper-container
 	var mySwiper = new Swiper('.swiper-container', {
@@ -53,6 +53,9 @@ $(function() {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
+		},
+		lazy: {
+			loadPrevNext: true,
 		},
 		on: {
 			init: function() {
@@ -82,25 +85,31 @@ $(function() {
 		mySwiper.slideTo(1);
 	})
 	$('.mulu li:nth-of-type(1)').on('click', function() {
-		mySwiper.slideTo(3);
+		mySwiper.slideTo(2);
 	})
 	$('.mulu li:nth-of-type(2)').on('click', function() {
 		mySwiper.slideTo(4);
 	})
 	$('.mulu li:nth-of-type(3)').on('click', function() {
-		mySwiper.slideTo(5);
-	})
-	$('.mulu li:nth-of-type(4)').on('click', function() {
 		mySwiper.slideTo(6);
 	})
-	$('.mulu li:nth-of-type(5)').on('click', function() {
-		mySwiper.slideTo(8);
+	$('.mulu li:nth-of-type(4)').on('click', function() {
+		mySwiper.slideTo(10);
 	})
-	$('.mulu li:nth-of-type(6)').on('click', function() {
+	$('.mulu li:nth-of-type(5)').on('click', function() {
 		mySwiper.slideTo(11);
 	})
-	$('.mulu li:nth-of-type(7)').on('click', function() {
+	$('.mulu li:nth-of-type(6)').on('click', function() {
 		mySwiper.slideTo(12);
+	})
+	$('.mulu li:nth-of-type(7)').on('click', function() {
+		mySwiper.slideTo(13);
+	})
+	$('.mulu li:nth-of-type(8)').on('click', function() {
+		mySwiper.slideTo(15);
+	})
+	$('.mulu li:nth-of-type(9)').on('click', function() {
+		mySwiper.slideTo(15);
 	})
 
 	//选择题
