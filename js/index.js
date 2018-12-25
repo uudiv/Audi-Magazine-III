@@ -133,7 +133,7 @@ $(function() {
 			dataArr.push($(item).attr('data-num'));
 		});
 
-		if(dataArr.length != 5 || !name || !tel) {
+		if(dataArr.length != 6 || !name || !tel) {
 			mui.alert('请填写完整信息');
 			return false
 		}
