@@ -40,6 +40,7 @@ $(function() {
 		$('.loading').fadeOut();
 		$('.music_btn').fadeIn();
 		$('.screen1 .box').fadeIn()
+		$('.screen1 .fhdl').fadeIn()
 	});
 
 	//swiper-container
