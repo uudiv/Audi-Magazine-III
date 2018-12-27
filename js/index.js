@@ -138,6 +138,11 @@ $(function() {
 			mui.alert('请填写完整信息');
 			return false
 		}
+		
+		if(!(/^[1][0-9]{10}$/.test(tel))){
+			mui.alert('请输入正确手机号码')
+			return false
+		}
 
 		console.log(dataArr)
 		console.log(name)
